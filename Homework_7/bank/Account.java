@@ -15,7 +15,7 @@ public class Account {
 	}
 	
 	public void setDollars(BigDecimal dollars) throws NegativeMoneyException {
-		if(this.dollars.compareTo(new BigDecimal(0)) >= 0){
+		if(dollars.compareTo(new BigDecimal(0)) >= 0){
 			this.dollars = dollars;
 		} else {
 			throw new NegativeMoneyException("Negativ money!!!");

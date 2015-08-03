@@ -19,13 +19,13 @@ public class Test {
 			isAccount(coorporative);
 			System.out.print("Scanner: ");
 			isAccount(scn);
-			System.out.println("Novo: ");
 			//isAccount(personal2);
 		} catch (InvalidAccountException e){
 			System.out.println(e.getMessage());
 		} catch (NegativeMoneyException e){
 			System.out.println(e.getMessage());
 		} 
+
 	}
 
 	public static void isAccount(Object obj) throws InvalidAccountException, NegativeMoneyException{
