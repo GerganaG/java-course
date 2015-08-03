@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Account {
 
-	protected BigDecimal dollars;
+	private BigDecimal dollars;
 	
 	public Account(){
 		this.dollars = new BigDecimal(0);
@@ -15,8 +15,9 @@ public class Account {
 	}
 	
 	public void setDollars(BigDecimal dollars) throws NegativeMoneyException {
-		this.dollars = dollars;
-		if(this.dollars.compareTo(new BigDecimal(0)) < 0){
+		if(this.dollars.compareTo(new BigDecimal(0)) >= 0){
+			this.dollars = dollars;
+		} else {
 			throw new NegativeMoneyException("Negativ money!!!");
 		}
 	}
