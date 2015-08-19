@@ -50,9 +50,9 @@ public class EvenAndOddNumbers {
 		System.out.print("\nOdd: ");
 		print(oddArray);
 		
-		int maxValueOdd = BucketSort.maxValue(oddArray);
 		System.out.print("\nSorted Odd: ");
-		BucketSort.printSequence(BucketSort.sort(oddArray, maxValueOdd));
+		QuickSortInDescendingOrder.quickSortInDescendingOrder(oddArray, 0, oddArray.length - 1);
+		print(oddArray);
 		
 		int maxValueEven = BucketSort.maxValue(evenArray);
 		System.out.print("\nSorted Even: ");
