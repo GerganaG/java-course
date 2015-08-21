@@ -32,7 +32,7 @@ public class Graph<T> {
 	 
 	 public void hasPath(Vertex<T> start, Vertex<T> end){	
 		 if(start.getNeighbors().contains(end)){
-			 System.out.println("have");			 
+			 System.out.println("There is a path!");			 
 		 } else{
 			 for(int i = 0; i < start.getNeighbors().size(); i++){
 				 Vertex<T> temp = start.getNeighbors().poll();

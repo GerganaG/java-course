@@ -45,6 +45,9 @@ public class TestGraph {
 		System.out.print("Is there path between node1 and node5: ");
 		graph.hasPath(node1, node4);
 		
+		System.out.print("Is there path between node1 and node6: ");
+		graph.hasPath(node1, node6);
+		
 	}
 
 }
