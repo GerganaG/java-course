@@ -20,7 +20,6 @@ import javax.swing.table.DefaultTableModel;
 public class LottoGame {
 
 	private JFrame frame;
-//	private JTable table;
 	private JTable table_2;
 	private JTable table_3;
 	private JTable table_1;
@@ -82,11 +81,11 @@ public class LottoGame {
 				Locale.setDefault(Locale.US);
 				WinningNumbers object = new WinningNumbers();
 
-				int[] winNums = object.drawNumbers();
-				for (int i = 0; i < winNums.length; i++) {
+				ArrayList<Integer> winNums = object.drawNumbers();
+				for (int i = 0; i < winNums.size(); i++) {
 					DefaultTableModel model = (DefaultTableModel) table_2.getModel();
 
-					model.addRow(new Object[] { (Object) winNums[i] });
+					model.addRow(new Object[] { (Object) winNums.get(i) });
 
 				}
 
